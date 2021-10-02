@@ -1,13 +1,23 @@
 import '../styles/App.scss';
-import Header from '../components/Header';
-import Page from '../components/Page';
-import Footer from '../components/Footer';
+import Header from './Header';
+import Page from './Page';
+import Footer from './Footer';
+
+import { useEffect, useState } from 'react';
+
 
 function App() {
+
+
+
+
+
+
+
   return (
     <>
       <Header />
-     <Page />
+     <Page/>
      <Footer />
     </>
   );
