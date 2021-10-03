@@ -1,12 +1,14 @@
 import "../styles/layout/page.scss";
 import { useEffect, useState } from 'react';
+
 import CharacterList from "./CharacterList";
+import Filters from "./Filters";
 import api from '../services/api';
 
 const Page = () => {
-    
-    const [data, setData] = useState([]);
-const [name, setName] = useState('');
+  const [name, setName] = useState('');
+  const [data, setData] = useState([]);
+
     useEffect(() => { 
     api().then((initialdata)=> {
       console.log( initialdata);
@@ -17,26 +19,23 @@ const [name, setName] = useState('');
     
     []);
 
+ const handleName = (ev) =>{
+        setName(ev.currentTarget.value);
+            }
 
+  const filteredData = data.filter( (character) => character.name.toLocaleLowerCase().includes(name.toLocaleLowerCase() ) );
 
-    const handleName = (ev) =>{
-setName(ev.currentTarget.value);
-    }
+  
 
-
-    const filteredData = data.filter( (character) => character.name.toLocaleLowerCase().includes(name.toLocaleLowerCase() ) );
 
     return (
         
 <main className="main"> 
-<input
-type="text"
-name=""
-id=""
-value={name}
-onChange={handleName}
+<Filters 
+name={name} 
+handleName={handleName} 
 />
- <CharacterList data={filteredData} />
+<CharacterList data={filteredData} />
 </main>
 
     )

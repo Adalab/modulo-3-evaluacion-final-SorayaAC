@@ -7,8 +7,11 @@ function api() {
             return{
             id: character.id,
             photo: character.image, 
-            name: character.name ,
-            specie: character.species 
+            name: character.name,
+            specie: character.species,
+            planet:character.location.name,
+            episodes:character.episode,
+            lifestatus:character.status
             }
         })
     })
