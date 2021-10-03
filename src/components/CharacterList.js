@@ -1,10 +1,10 @@
-import CharacterItem from "./CharacterItem";
+import CharacterDetail from "./CharacterDetail";
 
 function CharacterList(props) {
     
 const html = props.data.map((characterData) => (  
 <li key={characterData.id}>
-<CharacterItem characterData={characterData} />
+<CharacterDetail characterData={characterData} />
 </li>
 ));
     return(

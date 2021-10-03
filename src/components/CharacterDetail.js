@@ -1,7 +1,7 @@
 
 
-function CharacterItem(props) {
-    console.log('CharacterItem', props);
+function CharacterDetail(props) {
+    console.log('CharacterDetail', props);
 
 return(
     <> 
@@ -12,4 +12,4 @@ return(
 
 );
 }
-export default CharacterItem;
+export default CharacterDetail;

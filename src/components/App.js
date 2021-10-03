@@ -1,24 +1,21 @@
+import { Route, Switch } from "react-router-dom";
 import '../styles/App.scss';
 import Header from './Header';
 import Page from './Page';
 import Footer from './Footer';
 
-import { useEffect, useState } from 'react';
-
 
 function App() {
 
-
-
-
-
-
-
   return (
     <>
+    <Switch>
+      <Route>
       <Header />
      <Page/>
      <Footer />
+     </Route>
+     </Switch>
     </>
   );
 }
