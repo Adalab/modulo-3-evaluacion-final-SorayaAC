@@ -6,3 +6,16 @@
 
 //@import "pages/index";
 //@import "pages/card";
+
+
+
+ @font-face {
+    font-family: 'Rick';
+    src: url("../fonts/Calligraphr-Regular.ttf") format('truetype');
+    font-style: normal;
+    font-weight: normal;
+  }
+
+  *{
+    background-image: url('../images/Stars.jpg');
+  }

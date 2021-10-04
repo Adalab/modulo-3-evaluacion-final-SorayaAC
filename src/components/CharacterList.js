@@ -1,19 +1,16 @@
-
-import CharacterDetail from "./CharacterDetail";
+////// React import //////
+////// Services import //////
+////// Partials import //////
+import CharacterDetail from './CharacterDetail';
+////// Styles import //////
 
 function CharacterList(props) {
-    
-const html = props.data.map((characterData) => (  
-<li key={characterData.id}>
-<CharacterDetail characterData={characterData} />
-
-</li>
-));
-    return(
-        <ul>
-         {html}   
-        </ul>
-    );
+  const renderHtml = props.data.map((characterData) => (
+    <li key={characterData.id}>
+      <CharacterDetail characterData={characterData} />
+    </li>
+  ));
+  return <ul>{renderHtml}</ul>;
 }
 
 export default CharacterList;

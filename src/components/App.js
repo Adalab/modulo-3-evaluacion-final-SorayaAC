@@ -1,34 +1,64 @@
-import { Route, Switch, useRouteMatch } from "react-router-dom";
-import '../styles/App.scss';
+////// React import //////
+import { Route, Switch, useRouteMatch } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+////// Services import //////
+import api from '../services/api';
+////// Partials import //////
 import Header from './Header';
 import Page from './Page';
 import Footer from './Footer';
-import CharacterCard from "./CharacterCard";
-
+import CharacterCard from './CharacterCard';
+////// Styles import //////
+import '../styles/App.scss';
 
 function App() {
+  const [name, setName] = useState('');
+  const [data, setData] = useState([]);
 
-  
+  useEffect(() => {
+    api().then((initialdata) => {
+      // console.log(initialdata);
+      setData(initialdata);
+    });
+  }, []);
+
+  const handleName = (ev) => {
+    setName(ev.currentTarget.value);
+  };
+
+  const filteredData = data.filter((character) =>
+    character.name.toLocaleLowerCase().includes(name.toLocaleLowerCase())
+  );
+  console.log(filteredData);
+
+  const characterRoute = useRouteMatch('/character/:id');
+  const characterId = characterRoute !== null ? characterRoute.params.id : '';
+
+  const selectedCharacter = data.find(
+    (character) => character.id === parseInt(characterId)
+  );
+  console.log(selectedCharacter);
   return (
     <>
-    <Switch>
+      <Switch>
+        <Route exact path="/">
+          <Header />
+          <Page
+            filteredData={filteredData}
+            handleName={handleName}
+            name={name}
+          />
+          <Footer />
+        </Route>
 
-    <Route exact path="/">
-    <Header />
-    <Page/>
-    <Footer />
-    </Route>
+        <Route path="/character/:id">
+          <CharacterCard selectedCharacter={selectedCharacter} />
+        </Route>
 
-     <Route path="/character/:id">
-     <CharacterCard />
-     </Route>
-     
-     <Route>
-       <section>
-         No funciona
-       </section>
-     </Route>
-     </Switch>
+        <Route>
+          <section>No funciona</section>
+        </Route>
+      </Switch>
     </>
   );
 }

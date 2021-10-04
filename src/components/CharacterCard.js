@@ -1,28 +1,17 @@
-import {  useRouteMatch } from "react-router-dom";
-    
-
+////// React import //////
+////// Services import //////
+////// Partials import //////
+////// Styles import //////
 
 function CharacterCard(props) {
-
-//     const characterRoute = useRouteMatch('/character/:id');
-//     const characterId = (characterRoute !== null ) ?characterRoute.params.id : "";
-  
-//     const selectedCharacter = data.find((character) => character.id === characterId);
-//   console.log(selectedCharacter);
-   
-
-    return(
-
+  console.log(props);
+  return (
     <li>
-   
-        <img src={props.characterData.photo} alt=''  />
-        <h2>{props.characterData.name}   </h2>
-        <p> {props.characterData.specie}   </p>
-
-    
+      <img src={props.selectedCharacter.photo} alt="" />
+      <h2>{props.selectedCharacter.name} </h2>
+      <p> {props.selectedCharacter.specie} </p>
     </li>
-
-    );
+  );
 }
 
 export default CharacterCard;
