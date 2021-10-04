@@ -4,9 +4,8 @@ import { Link } from 'react-router-dom';
 ////// Partials import //////
 ////// Styles import //////
 import '../styles/layout/detail.scss';
-function CharacterDetail(props) {
-  // console.log('CharacterDetail', props);
 
+function CharacterDetail(props) {
   return (
     <article className="detail">
       <div className="container">

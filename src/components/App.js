@@ -22,13 +22,13 @@ function App() {
   }, []);
 
   const handleName = (ev) => {
+    ev.preventDefault();
     setName(ev.currentTarget.value);
   };
 
   const filteredData = data.filter((character) =>
     character.name.toLocaleLowerCase().includes(name.toLocaleLowerCase())
   );
-  console.log(filteredData);
 
   const characterRoute = useRouteMatch('/character/:id');
   const characterId = characterRoute !== null ? characterRoute.params.id : '';
@@ -36,7 +36,7 @@ function App() {
   const selectedCharacter = data.find(
     (character) => character.id === parseInt(characterId)
   );
-  console.log(selectedCharacter);
+
   return (
     <>
       <Switch>
