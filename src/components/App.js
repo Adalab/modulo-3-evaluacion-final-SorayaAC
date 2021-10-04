@@ -17,7 +17,6 @@ function App() {
 
   useEffect(() => {
     api().then((initialdata) => {
-      // console.log(initialdata);
       setData(initialdata);
     });
   }, []);

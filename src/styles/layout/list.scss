@@ -1,0 +1,11 @@
+.list{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+    &__item{
+        height: 300px;
+        width: 300px;
+        background-color: pink;
+    }
+}
