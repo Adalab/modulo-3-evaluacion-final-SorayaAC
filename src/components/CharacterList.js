@@ -11,7 +11,11 @@ function CharacterList(props) {
       <CharacterDetail characterData={characterData} />
     </li>
   ));
-  return <ul className="list">{renderHtml}</ul>;
+  return props.data.length === 0 ? (
+    <p className="list__error">Personaje no encontrado</p>
+  ) : (
+    <ul className="list">{renderHtml}</ul>
+  );
 }
 
 export default CharacterList;

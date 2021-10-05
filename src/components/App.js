@@ -36,7 +36,7 @@ function App() {
   const selectedCharacter = data.find(
     (character) => character.id === parseInt(characterId)
   );
-
+  console.log(selectedCharacter, characterId);
   return (
     <>
       <Switch>

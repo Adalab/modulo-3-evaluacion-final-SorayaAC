@@ -1,12 +1,6 @@
 @import "core/variables";
 @import "core/reset";
 @import "core/mixins";
-// @import "layout/header";
-// @import "layout/mainpage";
-
-//@import "pages/index";
-//@import "pages/card";
-
 
 
  @font-face {
@@ -16,6 +10,6 @@
     font-weight: normal;
   }
 
-  *{
+  body{
     background-image: url('../images/Stars.jpg');
   }

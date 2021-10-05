@@ -4,8 +4,12 @@
     flex-wrap: wrap;
     
     &__item{
-        height: 300px;
-        width: 300px;
-        background-color: pink;
+       margin:20px 
     }
+
+    &__error{
+        color: #63cbfb;
+        font-family: Rick;
+        font-size: 30px;  
+     }
 }

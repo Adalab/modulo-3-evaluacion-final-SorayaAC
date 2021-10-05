@@ -1,39 +1,39 @@
-
-.container{
-    //  width: 200px;
-    // height: 400px;
-    // background-color: rgb(255, 255, 255); 
-    
-    
-   
-}
-
-
 .detail{
-  
   width: 250px;
   height: 300px;
-border: 2px solid rgb(85, 254, 1);
- border-radius: 10px;
- text-align: center;
+  border-radius: 10px;
+  text-align: center;
+  background-color: rgba(83, 75, 75, 0.6);
     &:hover {
-     //box-shadow: 9px 2px 48px 7px rgba(111, 216, 19, 0.61);
-      box-shadow : 0 0 18px rgb(135, 252, 57);
+      box-shadow : 0 0 18px rgb(135, 252, 57);  
     }
-&__link{
-    text-decoration: none; 
-} 
+ 
  &__img{
     width: 150px; 
     height: 150px;
     border-radius: 200px;
  }
  &__name{
-     font-family: Rick;
+    font-family: Rick;
     color: #63cbfb;
+    font-size:20px ;
 }
 &__specie{
     font-family: Rick;
     color: #63cbfb;
+    font-size:20px ;
+}
+&__link{
+    text-decoration: none; 
+    &--btn{
+        width: 139px;
+        height: 56px;
+        background: grey;
+        font-family: Rick;
+        border-radius: 200px;
+        color: #63cbfb;
+        font-size:20px ;
+        border: solid rgb(135, 252, 57) 2px;
+    }
 }
 }

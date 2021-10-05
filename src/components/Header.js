@@ -8,7 +8,7 @@ import logo from '../images/logo.png';
 const Header = () => {
   return (
     <header className="header">
-      <img classNeme="header__logo" src={logo} alt="Rick&Morty" />
+      <img className="header__logo" src={logo} alt="Rick&Morty" />
     </header>
   );
 };
