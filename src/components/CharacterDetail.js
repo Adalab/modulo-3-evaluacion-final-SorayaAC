@@ -16,7 +16,7 @@ function CharacterDetail(props) {
           className="detail__link"
           to={`/character/${props.characterData.id}`}
         >
-          <button className="detail__link--btn">Escuanchéame!</button>
+          <button className="detail__link--btn">Squanch me!</button>
         </Link>
       </div>
     </article>

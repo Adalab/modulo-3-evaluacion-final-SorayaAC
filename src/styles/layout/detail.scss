@@ -1,8 +1,8 @@
 .detail{
   width: 250px;
-  height: 300px;
   border-radius: 10px;
   text-align: center;
+  padding: 30px;
   background-color: rgba(83, 75, 75, 0.6);
     &:hover {
       box-shadow : 0 0 18px rgb(135, 252, 57);  
@@ -34,6 +34,7 @@
         color: #63cbfb;
         font-size:20px ;
         border: solid rgb(135, 252, 57) 2px;
+        cursor: pointer;
     }
 }
 }

@@ -1,4 +1,11 @@
 .footer{
     color: #63cbfb;
     font-family: Rick;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    font-size: 30px;
+    @media (max-width: 600px) {
+        font-size: 20px;
+       }  
 }
